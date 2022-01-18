@@ -25,22 +25,27 @@ public class Calculator {
         }
         a = values[0];
         b = values[1];
-        char[] simbols = new char[9];
-        for (int i = 0; i < line.length(); i++) {
-            simbols[i] = line.charAt(i);
-            if (simbols[i] == '-') {
-                c = '-';
-            }
-            if (simbols[i] == '+') {
-                c = '+';
-            }
-            if (simbols[i] == '*') {
-                c = '*';
-            }
-            if (simbols[i] == '/') {
-                c = '/';
+         try {
+            char[] simbols = new char[9];
+            for (int i = 0; i < line.length(); i++) {
+                simbols[i] = line.charAt(i);
+                if (simbols[i] == '-') {
+                    c = '-';
+                }
+                if (simbols[i] == '+') {
+                    c = '+';
+                }
+                if (simbols[i] == '*') {
+                    c = '*';
+                }
+                if (simbols[i] == '/') {
+                    c = '/';
+                }
             }
         }
+        catch(ArrayIndexOutOfBoundsException e){
+            throw new ArrayIndexOutOfBoundsException("Некорректное значение");
+            }
         try {
             RomeNumbers.romanResult(a, b);
         } catch (NullPointerException e) {
