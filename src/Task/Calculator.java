@@ -66,5 +66,4 @@ public class Calculator {
         return result;
     }
 }
-    git config --global user.email "ilya1998g@yandex.ru"
-        git config --global user.name "Kron20"
+ 
